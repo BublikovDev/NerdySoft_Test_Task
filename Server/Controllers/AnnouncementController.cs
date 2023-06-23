@@ -84,7 +84,7 @@ namespace Server.Controllers
                 }
 
                 var similarAnnouncements = _announcementRepository.GetAll()
-                    .Where(a => a.Id != id && (ContainsSharedWord(a.Title, announcement.Title) || ContainsSharedWord(a.Description, announcement.Description)))
+                    .Where(a => a.Id != id && (ContainsSharedWord(a.Title, announcement.Title) && ContainsSharedWord(a.Description, announcement.Description)))
                     .Take(3)
                     .ToList();
 

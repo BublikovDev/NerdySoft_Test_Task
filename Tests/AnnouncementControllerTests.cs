@@ -167,8 +167,8 @@ namespace Tests
             };
             var similarAnnouncements = new List<Announcement>
         {
-            new Announcement { Id = 2, Title = "Similar Announcement 1", Description = "Description 1" },
-            new Announcement { Id = 3, Title = "Similar Announcement 2", Description = "Description 2" }
+            new Announcement { Id = 2, Title = "Similar Announcement 1", Description = "Description test 1" },
+            new Announcement { Id = 3, Title = "Similar Announcement 2", Description = "Description test 2" }
         };
             _repositoryMock.Setup(r => r.GetById(existingId)).Returns(existingAnnouncement);
             _repositoryMock.Setup(r => r.GetAll()).Returns(similarAnnouncements);
